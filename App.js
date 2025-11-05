@@ -18,10 +18,16 @@ import LongPressScreen from "./src/screens/LongPressScreen";
 import FlatListScreen from "./src/screens/FlatList";
 import LocationScreen from "./src/screens/LocationScreen";
 import SomScreen from "./src/screens/SomScreen";
-import MapaScreen from "./src/screens/MapaScreen";
+// import MapaScreen from "./src/screens/MapaScreen";
 import PersistenciaDadosScreen from "./src/screens/PersistenciaDadosScreen";
 import CameraScreen from "./src/screens/CameraScreen";
 import SensorAcelerometro from "./src/screens/SensorAcelerometro";
+import NetScreen from "./src/screens/NetSreen";
+// import GpsApp from "./src/screens/GpsApp";
+import Gestual1 from "./src/screens/Gestual1";
+import Gestual2 from "./src/screens/Gestual2";
+import Gestual3 from "./src/screens/Gestual3";
+import Gestual4 from "./src/screens/Gestual4";
 
 const Drawer = createDrawerNavigator();
 
@@ -94,11 +100,11 @@ export default function App() {
           component={SomScreen}
           options={{ title: "Som" }}
         />
-        <Drawer.Screen
+        {/* <Drawer.Screen
           name="Mapa"
           component={MapaScreen}
           options={{ title: "Mapa" }}
-        />
+        /> */}
         <Drawer.Screen
           name="Persistência de Dados"
           component={PersistenciaDadosScreen}
@@ -113,6 +119,36 @@ export default function App() {
           name="Acelerômetro"
           component={SensorAcelerometro}
           options={{ title: "Acelerômetro" }}
+        />
+        <Drawer.Screen
+          name="Monitor de Rede"
+          component={NetScreen}
+          options={{ title: "Monitor de Rede" }}
+        />
+        {/* <Drawer.Screen
+          name="GPS"
+          component={GpsApp}
+          options={{ title: "GPS" }}
+        /> */}
+        <Drawer.Screen
+          name="Atividade Gestual 1"
+          component={Gestual1}
+          options={{ title: "Atividade Gestual 1" }}
+        />
+        <Drawer.Screen
+          name="Atividade Gestual 2"
+          component={Gestual2}
+          options={{ title: "Atividade Gestual 2" }}
+        />
+        <Drawer.Screen
+          name="Atividade Gestual 3"
+          component={Gestual3}
+          options={{ title: "Atividade Gestual 3" }}
+        />
+        <Drawer.Screen
+          name="Atividade Gestual 4"
+          component={Gestual4}
+          options={{ title: "Atividade Gestual 4" }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
